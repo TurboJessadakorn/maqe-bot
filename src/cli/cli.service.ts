@@ -48,12 +48,12 @@ export class CliService {
 
     private turnRight() {
         const currentIndex = this.directions.indexOf(this.direction);
-        this.direction = this.directions[(currentIndex + 1)];
+        this.direction = this.directions[(currentIndex + 1) % 4];
     }
 
     private turnLeft() {
         const currentIndex = this.directions.indexOf(this.direction);
-        this.direction = this.directions[(currentIndex + 3)];
+        this.direction = this.directions[(currentIndex + 3) % 4];
     }
 
     private walk(value: number) {
